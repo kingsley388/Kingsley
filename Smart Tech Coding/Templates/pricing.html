@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pricing - Smart_Tech_Coding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Font Awesome for Social Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+       data-ad-slot="1234567890"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f4f8;
+      color: #2c3e50;
+    }
+
+    header {
+      background: #0056b3;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .header-left h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    nav.header-nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav.header-nav a {
+      color: #d6eaff;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 8px 14px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    nav.header-nav a:hover,
+    nav.header-nav a.active {
+      background: #007bff;
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .info-section {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .info-section h3 {
+      font-size: 2.5rem;
+      color: #0056b3;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .pricing-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 0 10px;
+    }
+
+    .pricing-card {
+      background: #f9fbff;
+      border: 1px solid #cce0ff;
+      border-radius: 16px;
+      padding: 25px 20px;
+      text-align: left;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .pricing-card h4 {
+      font-size: 1.4rem;
+      color: #007bff;
+      margin-bottom: 10px;
+    }
+
+    .pricing-card p {
+      margin: 8px 0;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .price-tag {
+      font-size: 1.6rem;
+      color: #28a745;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .enroll-btn {
+      background: #007bff;
+      color: white;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .enroll-btn:hover {
+      background: #0056b3;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: #f5f6fa;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 30px;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 12px;
+      font-size: 1.1rem;
+    }
+
+    .footer-column a {
+      color: #cce2ff;
+      text-decoration: none;
+      margin: 6px 0;
+      display: block;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .footer-column a:hover {
+      color: #ffffff;
+    }
+
+    .footer-social a {
+      margin: 0 8px;
+      color: #ffffff;
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+    }
+
+    .footer-social a:hover {
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #3a4a5b;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>Smart_Tech_Coding</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Services</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="pricing.html" class="active">Pricing</a>
+      <a href="ebooks.html">Ebooks</a>
+    </nav>
+  </header>
+
+  <section class="info-section">
+    <h3>Our Affordable Course Pricing</h3>
+    <div class="pricing-container">
+      <div class="pricing-card">
+        <h4>🌐 Web Development</h4>
+        <p>Duration: 12 weeks</p>
+        <p class="price-tag">$500</p>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+      <div class="pricing-card">
+        <h4>📊 Data Science</h4>
+        <p>Duration: 14 weeks</p>
+        <p class="price-tag">$600</p>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+      <div class="pricing-card">
+        <h4>🤖 AI / Machine Learning</h4>
+        <p>Duration: 16 weeks</p>
+        <p class="price-tag">$700</p>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+      <div class="pricing-card">
+        <h4>🛡️ Cybersecurity</h4>
+        <p>Duration: 12 weeks</p>
+        <p class="price-tag">$550</p>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+      <div class="pricing-card">
+        <h4>📱 Mobile App Development</h4>
+        <p>Duration: 12 weeks</p>
+        <p class="price-tag">$500</p>
+        <button class="enroll-btn">Enroll Now</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="feedback.html">Feedback</a>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <a href="mailto:info@smarttechcoding.com">info@smarttechcoding.com</a>
+        <a href="#">+234 800 123 4567</a>
+        <a href="#">Port Harcourt, Nigeria</a>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Smart_Tech_Coding. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>

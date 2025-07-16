@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Register | Smart_Tech_Coding</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      color: #2e3a59;
+    }
+
+    .bg-slideshow {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .bg-slideshow img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 20s infinite;
+    }
+
+    .bg-slideshow img:nth-child(1) { animation-delay: 0s; }
+    .bg-slideshow img:nth-child(2) { animation-delay: 5s; }
+    .bg-slideshow img:nth-child(3) { animation-delay: 10s; }
+    .bg-slideshow img:nth-child(4) { animation-delay: 15s; }
+
+    @keyframes fade {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      40% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 0; }
+    }
+
+    header {
+      width: 100%;
+      background: rgba(0,123,255,0.8);
+      backdrop-filter: saturate(180%) blur(10px);
+      padding: 20px 40px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-left h1 {
+      margin: 0;
+      font-size: 1.9rem;
+      color: #fff;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    }
+
+    .header-left p {
+      margin: 4px 0 0;
+      font-size: 0.9rem;
+      color: #d0e6ff;
+    }
+
+    .header-buttons a {
+      display: inline-block;
+      margin-left: 10px;
+      padding: 12px 26px;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 600;
+      background: linear-gradient(135deg,#28a745,#218838);
+      box-shadow: 0 4px 8px rgba(33,136,56,0.4);
+      transition: all 0.3s ease;
+    }
+
+    .header-buttons a:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg,#218838,#1b6b2f);
+    }
+
+    .form-container {
+      background: rgba(255,255,255,0.95);
+      max-width: 520px;
+      margin: 80px auto 40px;
+      padding: 45px 35px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .form-container:hover {
+      box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+    }
+
+    .form-container h2 {
+      font-size: 2rem;
+      color: #007BFF;
+      margin-bottom: 24px;
+    }
+
+    .form-container input,
+    .form-container select {
+      width: 100%;
+      padding: 14px 16px;
+      margin: 14px 0;
+      font-size: 16px;
+      border: 1.8px solid #ccc;
+      border-radius: 8px;
+      transition: border-color 0.25s;
+    }
+
+    .form-container input:focus,
+    .form-container select:focus {
+      border-color: #007BFF;
+      box-shadow: 0 0 6px rgba(0,123,255,0.4);
+      outline: none;
+    }
+
+    .form-container input[type="submit"] {
+      width: 100%;
+      padding: 14px 0;
+      margin-top: 30px;
+      background: linear-gradient(135deg,#28a745,#218838);
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(33,136,56,0.45);
+      transition: all 0.3s ease;
+    }
+
+    .form-container input[type="submit"]:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(135deg,#218838,#1b6b2f);
+    }
+
+    .info-section {
+      max-width: 900px;
+      margin: 40px auto 60px;
+      padding: 40px 50px;
+      background: rgba(255,255,255,0.95);
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    .info-section h3 {
+      font-size: 1.8rem;
+      color: #007BFF;
+      margin-bottom: 28px;
+    }
+
+    .info-section p,
+    .info-section ul {
+      font-size: 1.1rem;
+      margin-bottom: 18px;
+      line-height: 1.7;
+    }
+
+    .info-section ul {
+      padding-left: 20px;
+    }
+
+    .info-section ul li {
+      margin-bottom: 12px;
+    }
+
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .pricing-table th, .pricing-table td {
+      border: 1.5px solid #ddd;
+      padding: 14px 22px;
+      text-align: center;
+      font-size: 1rem;
+    }
+
+    .pricing-table th {
+      background: #007BFF;
+      color: white;
+    }
+
+    .pricing-table tr:hover {
+      background: #e8f0fe;
+    }
+
+    footer {
+      background: #2f3640;
+      color: #f5f6fa;
+      padding: 28px 20px;
+      text-align: center;
+      font-size: 0.95rem;
+      letter-spacing: 0.03em;
+    }
+
+    footer a {
+      color: #f39c12;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: #e67e22;
+    }
+
+    @media (max-width: 700px) {
+      header { flex-direction: column; padding: 20px; }
+      .header-buttons { margin-top: 10px; }
+      .form-container { margin: 60px 20px; padding: 35px 25px; }
+      .info-section { margin: 30px 15px; padding: 30px 25px; }
+      .pricing-table th, .pricing-table td { padding: 10px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-slideshow">
+    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1920&q=80">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1920&q=80">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1920&q=80">
+    <img src="https://images.unsplash.com/photo-1537432376769-7b0f6a02d32d?auto=format&fit=crop&w=1920&q=80">
+  </div>
+
+  <header>
+    <div class="header-left">
+      <h1>Smart_Tech_Coding</h1>
+      <p>Learn to Code the Smart Way</p>
+    </div>
+    <div class="header-buttons">
+      <a href="/login">Login</a>
+      <a href="/register">Register</a>
+    </div>
+  </header>
+
+  <div class="form-container">
+    <h2>Register</h2>
+    <form action="/register" method="post">
+      <input type="text" name="fullname" placeholder="Full Name" required>
+      <input type="email" name="email" placeholder="Email Address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="date" name="dob" placeholder="Date of Birth" required>
+      <input type="tel" name="phone" placeholder="Phone Number" required>
+      <label for="courses">Choose your course:</label>
+      <select name="courses" id="courses" required>
+        <option value="">-- Select an option --</option>
+        <option value="web_dev">Web Development</option>
+        <option value="data_science">Data Science</option>
+        <option value="ai_ml">AI / Machine Learning</option>
+        <option value="cybersecurity">Cybersecurity</option>
+        <option value="mobile_dev">Mobile App Development</option>
+      </select>
+      <input type="submit" value="Sign Up">
+    </form>
+  </div>
+
+  <div class="info-section" id="what-we-do">
+    <h3>What We Do</h3>
+    <p>At <strong>Smart_Tech_Coding</strong>, we deliver hands‑on, real‑world coding skills for students, professionals, and enthusiasts. Our learning model emphasizes doing, not just watching—grow as a developer with intention.</p>
+    <p>From beginner-friendly projects to advanced bootcamps, our curriculum and mentorship help you stay competitive in tech.</p>
+  </div>
+
+  <div class="info-section" id="what-we-offer">
+    <h3>What We Offer</h3>
+    <ul>
+      <li>Full-stack Web Development</li>
+      <li>Data Science & AI/ML Bootcamps</li>
+      <li>Cybersecurity & Ethical Hacking</li>
+      <li>Mobile App Development (iOS & Android)</li>
+      <li>Career coaching & project portfolio support</li>
+    </ul>
+  </div>
+
+  <div class="info-section" id="pricing">
+    <h3>Pricing</h3>
+    <table class="pricing-table">
+      <thead>
+        <tr><th>Course</th><th>Duration</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Web Development</td><td>12 weeks</td><td>$500</td></tr>
+        <tr><td>Data Science</td><td>14 weeks</td><td>$600</td></tr>
+        <tr><td>AI / Machine Learning</td><td>16 weeks</td><td>$700</td></tr>
+        <tr><td>Cybersecurity</td><td>12 weeks</td><td>$550</td></tr>
+        <tr><td>Mobile App Development</td><td>12 weeks</td><td>$500</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Smart_Tech_Coding. All rights reserved.</p>
+    <p>Made by Hon. Peter Chinonso & Hon. Kingsley Uzokwe</p>
+    <p><a href="mailto:Kingsleyuzokwe0@gmail.com">Contact Us</a></p>
+  </footer>
+
+</body>
+</html>

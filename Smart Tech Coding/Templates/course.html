@@ -1,0 +1,16 @@
+<section class="info-section">
+  <h3>📚 Enroll in a Course</h3>
+  <form method="POST" action="/enroll" style="max-width:500px; margin:auto;">
+    <input type="text" name="full_name" placeholder="Your Full Name" required style="width:100%; padding:10px; margin:10px 0;">
+    <input type="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; margin:10px 0;">
+    <select name="course" required style="width:100%; padding:10px; margin:10px 0;">
+      <option value="">-- Select Course --</option>
+      <option value="Web Development">Web Development</option>
+      <option value="Data Science">Data Science</option>
+      <option value="AI / Machine Learning">AI / Machine Learning</option>
+      <option value="Cybersecurity">Cybersecurity</option>
+      <option value="Mobile App Development">Mobile App Development</option>
+    </select>
+    <button type="submit" style="padding:10px 20px; background:#007bff; color:white; border:none; border-radius:5px;">Enroll</button>
+  </form>
+</section>

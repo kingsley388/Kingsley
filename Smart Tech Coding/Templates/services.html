@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Services - Smart_Tech_Coding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+  <ins class="adsbygoogle"
+       style="display:block; text-align:center;"
+       data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+       data-ad-slot="1234567890"
+       data-ad-format="auto"
+       data-full-width-responsive="true"></ins>
+  <script>
+       (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Inter', sans-serif, Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #2e3a59;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #007bff;
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky; top: 0; z-index: 100;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 10px rgba(0,123,255,0.3);
+    }
+    .header-left h1 { margin: 0; font-size: 1.8rem; font-weight: 700; }
+    nav.header-nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav.header-nav a {
+      color: #d0e6ff; font-weight: 600; text-decoration: none;
+      padding: 8px 12px; border-radius: 6px;
+    }
+    nav.header-nav a:hover,
+    nav.header-nav a.active {
+      background-color: rgba(255,255,255,0.25);
+      color: #fff; text-decoration: underline;
+    }
+
+    .info-section {
+      max-width: 1100px;
+      margin: 60px auto 40px;
+      background: white;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    .info-section h3 {
+      font-size: 2.4rem;
+      color: #007bff;
+      margin-bottom: 32px;
+      font-weight: 700;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+    .service-card {
+      background: #e6f0ff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,123,255,0.12);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+    }
+    .service-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 20px;
+      text-align: left;
+    }
+    .service-content h4 {
+      margin: 0 0 10px;
+      color: #0056b3;
+      font-size: 1.2rem;
+    }
+    .service-content p {
+      margin: 0;
+    }
+
+    footer {
+      background: #1e2a38;
+      color: #f0f3f7;
+      padding: 40px 20px 20px;
+      text-align: center;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto 30px;
+    }
+    .footer-column h4 { margin-bottom: 12px; font-size: 1.1rem; }
+    .footer-column a {
+      color: #cce2ff;
+      text-decoration: none;
+      margin: 6px 0;
+      display: block;
+    }
+    .footer-column a:hover { color: #ffffff; }
+    .footer-social a {
+      margin: 0 8px;
+      color: #ffffff;
+      font-size: 1.4rem;
+      transition: transform 0.3s ease;
+    }
+    .footer-social a:hover { transform: scale(1.2); }
+    .footer-bottom {
+      border-top: 1px solid #3a4a5b;
+      margin-top: 20px;
+      padding-top: 10px;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 650px) {
+      header { flex-direction: column; text-align: center; gap: 10px; }
+      .info-section { margin: 30px 15px; padding: 30px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>Smart_Tech_Coding</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="ebooks.html">Ebooks</a>
+    </nav>
+  </header>
+
+  <section class="info-section">
+    <h3>Our Services</h3>
+    <div class="service-grid">
+      <div class="service-card">
+        <img src="https://source.unsplash.com/800x600/?web,developer" alt="Web Development">
+        <div class="service-content">
+          <h4>Full-stack Web Development</h4>
+          <p>Learn front-end and back-end development with real-world projects.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/800x600/?data,ai" alt="Data Science">
+        <div class="service-content">
+          <h4>Data Science & AI/ML Bootcamps</h4>
+          <p>Master Python, AI tools, and machine learning algorithms hands-on.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/800x600/?cybersecurity" alt="Cybersecurity">
+        <div class="service-content">
+          <h4>Cybersecurity & Ethical Hacking</h4>
+          <p>Understand online threats, penetration testing, and system protection.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/800x600/?mobile,app" alt="Mobile App Dev">
+        <div class="service-content">
+          <h4>Mobile App Development</h4>
+          <p>Build Android and iOS apps using Flutter and React Native.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/800x600/?portfolio,career" alt="Career Coaching">
+        <div class="service-content">
+          <h4>Career Coaching & Portfolio Support</h4>
+          <p>Get guidance on building your portfolio and cracking tech interviews.</p>
+        </div>
+      </div>
+      <div class="service-card">
+        <img src="https://source.unsplash.com/800x600/?training,team" alt="Corporate Training">
+        <div class="service-content">
+          <h4>Customized Corporate Training</h4>
+          <p>Upskill your team with targeted training built for your business goals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="info-section">
+    <h3>📞 1-on-1 Private Classes</h3>
+    <p>Get trained directly via WhatsApp or Zoom. Available subjects:</p>
+    <ul>
+      <li>✅ Python Programming – ₦5,000</li>
+      <li>✅ HTML & CSS – ₦3,000</li>
+      <li>✅ Excel & Office Tools – ₦3,500</li>
+    </ul>
+    <p>Pay and chat with us on <b>+234-803-xxxxxxx</b> or email <b>smarttechcoding@gmail.com</b></p>
+  </section>
+
+  <section class="info-section">
+    <h3>💡 Recommended Tools</h3>
+    <p>These tools help our students, and we earn a small commission when you use them.</p>
+    <ul>
+      <li><a href="https://namecheap.com?affid=yourid" target="_blank">Buy Domains on Namecheap</a></li>
+      <li><a href="https://hostinger.com?ref=yourid" target="_blank">Affordable Hosting on Hostinger</a></li>
+      <li><a href="https://bit.ly/learn-ai-affiliate" target="_blank">AI Course Bundle</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <a href="index.html">Home</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="feedback.html">Feedback</a>
+        <a href="courses.html">Courses</a>
+      </div>
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <a href="kingsleyuzokwe0@gmail.com">kingsleyuzokwe0@gmail.comm</a>
+        <a href="08022631595">+234 8022631595</a>
+        <a href="#">Port Harcourt, Nigeria</a>
+      </div>
+      <div class="footer-column">
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2025 Smart_Tech_Coding. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
