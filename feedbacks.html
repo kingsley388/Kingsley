@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback - Smart_Tech_Coding</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Google AdSense -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-client="ca-pub-xxxxxxxxxxxxxxxx"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #eef3f8;
+      color: #2e3a59;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(to right, #007bff, #0056b3);
+      padding: 20px 40px;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    .header-left h1 {
+      margin: 0;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    nav.header-nav {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    nav.header-nav a {
+      color: #cfe6ff;
+      font-weight: 600;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    nav.header-nav a:hover,
+    nav.header-nav a.active {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Main Section */
+    .info-section {
+      max-width: 600px;
+      margin: 60px auto 40px;
+      padding: 40px 30px;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .info-section h3 {
+      font-size: 2.3rem;
+      color: #007bff;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+
+    /* Feedback Form */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+      width: 100%;
+      padding: 14px 16px;
+      font-size: 1rem;
+      border: 2px solid #d0dce8;
+      border-radius: 12px;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      resize: vertical;
+    }
+    form input[type="text"]:focus,
+    form input[type="email"]:focus,
+    form textarea:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0,123,255,0.3);
+      outline: none;
+    }
+
+    form input[type="submit"] {
+      background: linear-gradient(135deg, #28a745, #218838);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 14px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(33, 136, 56, 0.4);
+      transition: all 0.3s ease;
+    }
+    form input[type="submit"]:hover {
+      background: linear-gradient(135deg, #1e7e34, #18632a);
+      transform: translateY(-2px);
+    }
+
+    /* Success Message Placeholder */
+    .success-msg {
+      margin-top: 15px;
+      color: #28a745;
+      font-weight: 600;
+      display: none; /* show this via JS after submit */
+    }
+
+    /* Footer */
+    footer {
+      background: #2f3640;
+      color: #f5f6fa;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      margin-top: 50px;
+      user-select: none;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      .info-section {
+        margin: 30px 15px;
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <h1>Smart_Tech_Coding</h1>
+    </div>
+    <nav class="header-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="feedback.html">Feedback</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="ebooks.html">Pricing</a>
+    </nav>
+  </header>
+
+  <section class="info-section">
+    <h3>We Value Your Feedback</h3>
+ <body>
+
+<form action="/feedback" method="post">
+  <label for="name">Full Name</label>
+  <input type="text" name="name" required>
+
+  <label for="email">Email</label>
+  <input type="email" name="email" required>
+
+  <label for="message">Your Feedback</label>
+  <textarea name="message" rows="5" required></textarea>
+
+  <input type="submit" value="Send Feedback">
+</form>
+
+</body>
+  </section>
+
+  <footer>
+    &copy; 2025 Smart_Tech_Coding. All rights reserved.
+  </footer>
+
+</body>
+</html>
+
